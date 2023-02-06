@@ -55,7 +55,7 @@
                                 <textarea class="form-control" id="editor" name="content" rows="3" placeholder="Enter a Content.."><?= $sop['contents_sop'] ?></textarea>
                                 <!-- CKEditor 5 Classic Container -->
                                 <!-- <div id="js-ckeditor5-classic"></div> -->
-                            </div>
+                            </div>  
 
                             <button type="submit" class="btn btn-lg btn-alt-primary">Update</button>
                         </div>
