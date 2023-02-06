@@ -225,6 +225,11 @@ class SopController extends ResourceController
      */
     public function delete($id = null)
     {
-        //
+        if (!isset($id)) {
+            throw new \CodeIgniter\Exceptions\PageNotFoundException('SOP Id not found');
+        }
+
+        $this->SopModel->delete($id);
+        return redirect()->to(base_url('backend/sop'))->with('success', "Data SOP deleted successfully!");
     }
 }
