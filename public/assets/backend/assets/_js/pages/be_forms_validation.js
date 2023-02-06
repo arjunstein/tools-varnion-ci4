@@ -77,8 +77,12 @@ class pageFormsValidation {
           required: true,
           minlength: 2
         },
-        // Create Categories
+        // Create Tam
         'val-nameTeam': {
+          required: true
+        },
+        // Create Tam
+        'val-nameIncomingCase': {
           required: true
         },
         // Create Categories
@@ -138,6 +142,10 @@ class pageFormsValidation {
         // Create Teams
         'val-nameTeam': {
           required: 'Name Team cannot be empty!',
+        },
+        // Create Incoming Case
+        'val-nameIncomingCase': {
+          required: 'Name Incoming Case cannot be empty!',
         },
         // Create Categories
         'val-nameCategory': {

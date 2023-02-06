@@ -41,7 +41,7 @@
                     <!-- Regular -->
                     <div class="row items-push">
                         <div class="col-lg-12 col-xl-12">
-                            <div class="row mb-3">
+                            <div class="row mb-3"> 
                                 <div class="col-6">
                                     <label class="form-label" for="nameTeam">Name Team <span class="text-danger">*</span></label>
                                     <input type="hidden" name="nameTeam" value="<?= $team['id_teams'] ?>">
