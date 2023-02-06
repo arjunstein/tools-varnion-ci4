@@ -77,6 +77,21 @@ class pageFormsValidation {
           required: true,
           minlength: 2
         },
+        // Create Team
+        'val-nameTeam': {
+          required: true
+        },
+        // Create SOP
+        'val-titleSop': {
+          required: true
+        },
+        'val-content': {
+          required: true
+        },
+        // Create Incoming Case
+        'val-nameIncomingCase': {
+          required: true
+        },
         // Create Categories
         'val-nameCategory': {
           required: true
@@ -131,6 +146,21 @@ class pageFormsValidation {
         'val-number': 'Please enter a number!',
         'val-range': 'Please enter a number between 1 and 5!',
         'val-terms': 'You must agree to the service terms!',
+        // Create Teams
+        'val-nameTeam': {
+          required: 'Name Team cannot be empty!',
+        },
+        // Create SOP
+        'val-titleSop': {
+          required: 'Title SOP cannot be empty!',
+        },
+        'val-content': {
+          required: 'Content cannot be empty!',
+        },
+        // Create Incoming Case
+        'val-nameIncomingCase': {
+          required: 'Name Incoming Case cannot be empty!',
+        },
         // Create Categories
         'val-nameCategory': {
           required: 'Name Category cannot be empty!',

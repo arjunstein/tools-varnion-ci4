@@ -105,14 +105,7 @@
                         <span class="nav-main-link-name">Dashboard</span>
                     </a>
                 </li>
-                <?php if (session()->privilege == "Admin") { ?>
-                    <li class="nav-main-item">
-                        <a class="nav-main-link <?= ($urlMenu == "users" || $urlMenu == "new" || $urlMenu == "edit") ? 'active' : '' ?>" href="<?= base_url('backend/users') ?>">
-                            <i class="nav-main-link-icon fas fa-users"></i>
-                            <span class="nav-main-link-name">Data Users</span>
-                        </a>
-                    </li>
-                <?php } ?>
+
                 <li class="nav-main-item">
                     <a class="nav-main-link nav-main-link-submenu <?= ($urlMenu == "notes") ? 'active' : '' ?>" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
                         <i class="nav-main-link-icon fas fa-book"></i>
@@ -136,6 +129,14 @@
                 <?php if (session()->privilege == "Admin") { ?>
                     <li class="nav-main-item 
                 <?= (
+                        // Users
+                        $urlMenu == "users" ||
+                        $urlMenu == "new" ||
+                        $urlMenu == "edit" ||
+                        // SOP
+                        $urlMenu == "sop" ||
+                        $urlMenu == "sop/new" ||
+                        $urlMenu == "sop/edit" ||
                         // Categories
                         $urlMenu == "categories" ||
                         $urlMenu == "categories/new" ||
@@ -160,7 +161,17 @@
                         // Internal Tools
                         $urlMenu == "internal_tools" ||
                         $urlMenu == "internal_tools/new" ||
-                        $urlMenu == "internal_tools/edit"
+                        $urlMenu == "internal_tools/edit" ||
+
+                        // Teams
+                        $urlMenu == "teams" ||
+                        $urlMenu == "teams/new" ||
+                        $urlMenu == "teams/edit" ||
+
+                        // Incoming Case
+                        $urlMenu == "incoming_case" ||
+                        $urlMenu == "incoming_case/new" ||
+                        $urlMenu == "incoming_case/edit"
                     ) ? 'open' : '' ?>
                 ">
                         <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
@@ -170,6 +181,7 @@
                         <ul class="nav-main-submenu">
                             <li class="nav-main-item
                         <?= (
+                            
                             // Categories
                             $urlMenu == "categories" ||
                             $urlMenu == "categories/new" ||
@@ -189,7 +201,7 @@
                             // Categories Privilege
                             $urlMenu == "categories_privilege" ||
                             $urlMenu == "categories_privilege/new" ||
-                            $urlMenu =="categories_privilege/edit"
+                            $urlMenu == "categories_privilege/edit"
                         ) ? 'open' : '' ?>
                         ">
                                 <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
@@ -232,83 +244,35 @@
                                     <span class="nav-main-link-name">Internal Tools</span>
                                 </a>
                             </li>
+                            <li class="nav-main-item">
+                                <a class="nav-main-link <?= ($urlMenu == "incoming_case" || $urlMenu == "incoming_case/new" || $urlMenu == "incoming_case/edit") ? 'active' : '' ?>" href="<?= base_url('backend/incoming_case') ?>">
+                                    <i class="nav-main-link-icon fa fa-tags"></i>
+                                    <span class="nav-main-link-name">Incoming Case</span>
+                                </a>
+                            </li>
+                            <li class="nav-main-item">
+                                <a class="nav-main-link <?= ($urlMenu == "sop" || $urlMenu == "sop/new" || $urlMenu == "sop/edit") ? 'active' : '' ?>" href="<?= base_url('backend/sop') ?>">
+                                    <i class="nav-main-link-icon fa fa-cubes"></i>
+                                    <span class="nav-main-link-name">SOP</span>
+                                </a>
+                            </li>
+                            
+                            <li class="nav-main-item">
+                                <a class="nav-main-link <?= ($urlMenu == "users" || $urlMenu == "new" || $urlMenu == "edit") ? 'active' : '' ?>" href="<?= base_url('backend/users') ?>">
+                                    <i class="nav-main-link-icon fas fa-users"></i>
+                                    <span class="nav-main-link-name">Users</span>
+                                </a>
+                            </li>
+                            <li class="nav-main-item">
+                                <a class="nav-main-link <?= ($urlMenu == "teams" || $urlMenu == "teams/new" || $urlMenu == "teams/edit") ? 'active' : '' ?>" href="<?= base_url('backend/teams') ?>">
+                                    <i class="nav-main-link-icon fa fa-user-circle"></i>
+                                    <span class="nav-main-link-name">Teams</span>
+                                </a>
+                            </li>
+
                         </ul>
                     </li>
                 <?php } ?>
-                <!-- <li class="nav-main-item 
-                <?= ($urlMenu == "categories" ||
-                    $urlMenu == "categories/new" ||
-                    $urlMenu == "categories/edit" ||
-                    $urlMenu == "categories_external" ||
-                    $urlMenu == "categories_gamas" ||
-                    $urlMenu == "categories_notes" ||
-                    $urlMenu == "categories_privilege"
-                ) ? 'open' : '' ?>
-                ">
-                    <a class="nav-main-link nav-main-link-submenu 
-                    <?= (
-                        // Categories
-                        $urlMenu == "categories" ||
-                        $urlMenu == "categories/new" ||
-                        $urlMenu == "categories/edit" ||
-                        // Categories External
-                        $urlMenu == "categories_external" ||
-                        $urlMenu == "categories_external/new" ||
-                        $urlMenu == "categories_external/edit" ||
-                        // Categories Gamas
-                        $urlMenu == "categories_gamas" ||
-                        $urlMenu == "categories_gamas/new" ||
-                        $urlMenu == "categories_gamas/edit" ||
-                        // Categories Notes
-                        $urlMenu == "categories_notes" ||
-                        $urlMenu == "categories_notes/new" ||
-                        $urlMenu == "categories_notes/edit" ||
-                        // Categories Privilege
-                        $urlMenu == "categories_privilege" ||
-                        $urlMenu == "categories_privilege/new" ||
-                        $urlMenu == "categories_privilege/edit"
-                    ) ? 'active' : '' ?>
-                    " data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
-                        <i class="nav-main-link-icon fa fa-tasks"></i>
-                        <span class="nav-main-link-name">Categories</span>
-                    </a>
-                    <ul class="nav-main-submenu">
-                        <li class="nav-main-item">
-                            <a class="nav-main-link <?= ($urlMenu == "categories" || $urlMenu == "categories/new" || $urlMenu == "categories/edit") ? 'active' : '' ?>" href="<?= base_url('backend/categories') ?>">
-                                <i class="nav-main-link-icon fas fa-tags"></i>
-                                <span class="nav-main-link-name">Categories</span>
-                            </a>
-                        </li>
-                        <li class="nav-main-item">
-                            <a class="nav-main-link <?= ($urlMenu == "categories_external" || $urlMenu == "categories_external/new" || $urlMenu == "categories_external/edit") ? 'active' : '' ?>" href="<?= base_url('backend/categories_external') ?>">
-                                <i class="nav-main-link-icon fas fa-tags"></i>
-                                <span class="nav-main-link-name">Categories External</span>
-                            </a>
-                        </li>
-                        <li class="nav-main-item">
-                            <a class="nav-main-link <?= ($urlMenu == "categories_gamas") ? 'active' : '' ?>" href="<?= base_url('backend/categories_gamas') ?>">
-                                <i class="nav-main-link-icon fas fa-tags"></i>
-                                <span class="nav-main-link-name">Categories Gamas</span>
-                            </a>
-                        </li>
-                        <li class="nav-main-item">
-                            <a class="nav-main-link <?= ($urlMenu == "categories_notes") ? 'active' : '' ?>" href="<?= base_url('backend/categories_notes') ?>">
-                                <i class="nav-main-link-icon fas fa-tags"></i>
-                                <span class="nav-main-link-name">Categories Notes</span>
-                            </a>
-                        </li>
-
-
-                        <li class="nav-main-item">
-                            <a class="nav-main-link <?= ($urlMenu == "categories_privilege") ? 'active' : '' ?>" href="<?= base_url('backend/categories_privilege') ?>">
-                                <i class="nav-main-link-icon fas fa-tags"></i>
-                                <span class="nav-main-link-name">Categories Privilege</span>
-                            </a>
-                        </li>
-
-                    </ul>
-                </li> -->
-
 
             </ul>
         </div>
