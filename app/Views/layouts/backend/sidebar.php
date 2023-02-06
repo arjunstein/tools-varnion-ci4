@@ -105,14 +105,7 @@
                         <span class="nav-main-link-name">Dashboard</span>
                     </a>
                 </li>
-                <?php if (session()->privilege == "Admin") { ?>
-                    <li class="nav-main-item">
-                        <a class="nav-main-link <?= ($urlMenu == "users" || $urlMenu == "new" || $urlMenu == "edit") ? 'active' : '' ?>" href="<?= base_url('backend/users') ?>">
-                            <i class="nav-main-link-icon fas fa-users"></i>
-                            <span class="nav-main-link-name">Data Users</span>
-                        </a>
-                    </li>
-                <?php } ?>
+
                 <li class="nav-main-item">
                     <a class="nav-main-link nav-main-link-submenu <?= ($urlMenu == "notes") ? 'active' : '' ?>" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
                         <i class="nav-main-link-icon fas fa-book"></i>
@@ -136,6 +129,10 @@
                 <?php if (session()->privilege == "Admin") { ?>
                     <li class="nav-main-item 
                 <?= (
+                        // Users
+                        $urlMenu == "users" ||
+                        $urlMenu == "new" ||
+                        $urlMenu == "edit" ||
                         // Categories
                         $urlMenu == "categories" ||
                         $urlMenu == "categories/new" ||
@@ -160,7 +157,7 @@
                         // Internal Tools
                         $urlMenu == "internal_tools" ||
                         $urlMenu == "internal_tools/new" ||
-                        $urlMenu == "internal_tools/edit" || 
+                        $urlMenu == "internal_tools/edit" ||
 
                         // Teams
                         $urlMenu == "teams" ||
@@ -180,6 +177,7 @@
                         <ul class="nav-main-submenu">
                             <li class="nav-main-item
                         <?= (
+                            
                             // Categories
                             $urlMenu == "categories" ||
                             $urlMenu == "categories/new" ||
@@ -199,7 +197,7 @@
                             // Categories Privilege
                             $urlMenu == "categories_privilege" ||
                             $urlMenu == "categories_privilege/new" ||
-                            $urlMenu =="categories_privilege/edit"
+                            $urlMenu == "categories_privilege/edit"
                         ) ? 'open' : '' ?>
                         ">
                                 <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
@@ -246,6 +244,12 @@
                                 <a class="nav-main-link <?= ($urlMenu == "incoming_case" || $urlMenu == "incoming_case/new" || $urlMenu == "incoming_case/edit") ? 'active' : '' ?>" href="<?= base_url('backend/incoming_case') ?>">
                                     <i class="nav-main-link-icon fa fa-tags"></i>
                                     <span class="nav-main-link-name">Incoming Case</span>
+                                </a>
+                            </li>
+                            <li class="nav-main-item">
+                                <a class="nav-main-link <?= ($urlMenu == "users" || $urlMenu == "new" || $urlMenu == "edit") ? 'active' : '' ?>" href="<?= base_url('backend/users') ?>">
+                                    <i class="nav-main-link-icon fas fa-users"></i>
+                                    <span class="nav-main-link-name">Users</span>
                                 </a>
                             </li>
                             <li class="nav-main-item">
