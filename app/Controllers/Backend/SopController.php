@@ -26,6 +26,18 @@ class SopController extends ResourceController
         return view('backend/sop/index', $data);
     }
 
+    public function list()
+    {
+        $data = [
+            'sop' => $this-> SopModel->orderBy('id_sop', 'DESC')->paginate(5),
+            'pager' => $this->SopModel->pager,
+            'title' => "List SOP - Tools Varnion",
+            'urlMenu' => implode('/', array_slice($this->request->uri->getSegments(), 1)),
+        ];
+
+        return view('backend/sop/list', $data);
+    }
+
     /**
      * Return a new resource object, with default properties
      *

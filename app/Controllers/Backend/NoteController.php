@@ -19,14 +19,12 @@ class NoteController extends ResourceController
      */
     public function index()
     {
-        // $data['notes'] = $this->NoteModel->orderBy('id', 'DESC')->limit(10)->findAll();
         $data = [
-            'notes' => $this->NoteModel->paginate(5),
+            'notes' => $this-> NoteModel->orderBy('id', 'DESC')->paginate(5),
             'pager' => $this->NoteModel->pager,
             'title' => "List Notes - Tools Varnion",
             'urlMenu' => implode('/', array_slice($this->request->uri->getSegments(), 1)),
         ];
-        // dd($data['notes']);
 
         return view('backend/notes/index', $data);
     }

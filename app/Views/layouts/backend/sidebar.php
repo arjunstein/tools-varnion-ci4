@@ -105,6 +105,12 @@
                         <span class="nav-main-link-name">Dashboard</span>
                     </a>
                 </li>
+                <li class="nav-main-item">
+                    <a class="nav-main-link <?= ($urlMenu == "sop" || $urlMenu == "sop/new" || $urlMenu == "sop/edit") ? 'active' : '' ?>" href="<?= base_url('backend/sop/list') ?>">
+                        <i class="nav-main-link-icon fa fa-cubes"></i>
+                        <span class="nav-main-link-name">SOP</span>
+                    </a>
+                </li>
 
                 <li class="nav-main-item">
                     <a class="nav-main-link nav-main-link-submenu <?= ($urlMenu == "notes") ? 'active' : '' ?>" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
@@ -181,7 +187,7 @@
                         <ul class="nav-main-submenu">
                             <li class="nav-main-item
                         <?= (
-                            
+
                             // Categories
                             $urlMenu == "categories" ||
                             $urlMenu == "categories/new" ||
@@ -256,7 +262,7 @@
                                     <span class="nav-main-link-name">SOP</span>
                                 </a>
                             </li>
-                            
+
                             <li class="nav-main-item">
                                 <a class="nav-main-link <?= ($urlMenu == "users" || $urlMenu == "new" || $urlMenu == "edit") ? 'active' : '' ?>" href="<?= base_url('backend/users') ?>">
                                     <i class="nav-main-link-icon fas fa-users"></i>

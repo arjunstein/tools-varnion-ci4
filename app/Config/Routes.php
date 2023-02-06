@@ -50,6 +50,7 @@ $routes->group('backend', ['filter' => 'AuthFilter'], static function ($routes) 
     $routes->resource('incoming_case', ['controller' => 'backend\IncomingCaseController', 'except' => 'show']);
     $routes->resource('sop', ['controller' => 'backend\SopController', 'except' => 'show']);
     $routes->post('sop/uploadImage/', 'backend\SopController::uploadImage');
+    $routes->get('sop/list/', 'backend\SopController::list');
     $routes->resource('teams', ['controller' => 'backend\TeamController', 'except' => 'show']);
 });
 
