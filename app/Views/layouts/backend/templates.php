@@ -121,7 +121,7 @@ Name    : Moch Azmi Iskandar
     <script src="<?= base_url('assets/backend/') ?>/assets/js/lib/jquery.min.js"></script>
 
     <!-- Page JS Plugins -->
-    <script src="<?= base_url('assets/backend/') ?>/assets/js/plugins/ckeditor5-classic/build/ckeditor.js"></script>
+    <!-- <script src="<?= base_url('assets/backend/') ?>/assets/js/plugins/ckeditor5-classic/build/ckeditor.js"></script> -->
     <script src="<?= base_url('assets/backend/') ?>/assets/js/plugins/datatables/jquery.dataTables.min.js"></script>
     <script src="<?= base_url('assets/backend/') ?>/assets/js/plugins/datatables-bs5/js/dataTables.bootstrap5.min.js"></script>
     <script src="<?= base_url('assets/backend/') ?>/assets/js/plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
@@ -141,7 +141,7 @@ Name    : Moch Azmi Iskandar
 
     <!-- Page JS Helpers (Select2 plugin) -->
     <script>
-        One.helpersOnLoad(['js-ckeditor5']);
+        // One.helpersOnLoad(['js-ckeditor5']);
         One.helpersOnLoad(['jq-select2']);
     </script>
 

@@ -77,11 +77,18 @@ class pageFormsValidation {
           required: true,
           minlength: 2
         },
-        // Create Tam
+        // Create Team
         'val-nameTeam': {
           required: true
         },
-        // Create Tam
+        // Create SOP
+        'val-titleSop': {
+          required: true
+        },
+        'val-content': {
+          required: true
+        },
+        // Create Incoming Case
         'val-nameIncomingCase': {
           required: true
         },
@@ -142,6 +149,13 @@ class pageFormsValidation {
         // Create Teams
         'val-nameTeam': {
           required: 'Name Team cannot be empty!',
+        },
+        // Create SOP
+        'val-titleSop': {
+          required: 'Title SOP cannot be empty!',
+        },
+        'val-content': {
+          required: 'Content cannot be empty!',
         },
         // Create Incoming Case
         'val-nameIncomingCase': {

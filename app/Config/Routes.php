@@ -49,6 +49,7 @@ $routes->group('backend', ['filter' => 'AuthFilter'], static function ($routes) 
     $routes->resource('internal_tools', ['controller' => 'backend\InternalToolsController', 'except' => 'show']);
     $routes->resource('incoming_case', ['controller' => 'backend\IncomingCaseController', 'except' => 'show']);
     $routes->resource('sop', ['controller' => 'backend\SopController', 'except' => 'show']);
+    $routes->post('sop/uploadImage/', 'backend\SopController::uploadImage');
     $routes->resource('teams', ['controller' => 'backend\TeamController', 'except' => 'show']);
 });
 

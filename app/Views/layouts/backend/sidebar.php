@@ -133,6 +133,10 @@
                         $urlMenu == "users" ||
                         $urlMenu == "new" ||
                         $urlMenu == "edit" ||
+                        // SOP
+                        $urlMenu == "sop" ||
+                        $urlMenu == "sop/new" ||
+                        $urlMenu == "sop/edit" ||
                         // Categories
                         $urlMenu == "categories" ||
                         $urlMenu == "categories/new" ||
@@ -246,6 +250,13 @@
                                     <span class="nav-main-link-name">Incoming Case</span>
                                 </a>
                             </li>
+                            <li class="nav-main-item">
+                                <a class="nav-main-link <?= ($urlMenu == "sop" || $urlMenu == "sop/new" || $urlMenu == "sop/edit") ? 'active' : '' ?>" href="<?= base_url('backend/sop') ?>">
+                                    <i class="nav-main-link-icon fa fa-cubes"></i>
+                                    <span class="nav-main-link-name">SOP</span>
+                                </a>
+                            </li>
+                            
                             <li class="nav-main-item">
                                 <a class="nav-main-link <?= ($urlMenu == "users" || $urlMenu == "new" || $urlMenu == "edit") ? 'active' : '' ?>" href="<?= base_url('backend/users') ?>">
                                     <i class="nav-main-link-icon fas fa-users"></i>
