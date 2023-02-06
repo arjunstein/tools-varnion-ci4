@@ -25,7 +25,7 @@
                 ?>
                     <!-- Story -->
                     <div class="push">
-                        <a class="block block-rounded block-link-pop overflow-hidden" href="<?= base_url('backend/sop/show') ?>">
+                        <a class="block block-rounded block-link-pop overflow-hidden" href="<?= base_url('backend/sop/' . $sop['id_sop'] . '/detail') ?>">
                             <!-- <img class="img-fluid" src="assets/media/photos/photo8@2x.jpg" alt=""> -->
                             <div class="block-content">
                                 <h4 class="mb-1">
@@ -35,7 +35,7 @@
                                 <span class="text-primary">Danielle Jones</span> on July 16, 2019 · <span class="text-muted">10 min</span>
                             </p> -->
                                 <p class="fs-sm text-muted">
-                                    <?= $sop['contents_sop'] ?>
+                                    <?= substr($sop['contents_sop'], 0, 300); ?>...
                                 </p>
                             </div>
                         </a>

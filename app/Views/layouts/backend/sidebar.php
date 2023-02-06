@@ -106,7 +106,7 @@
                     </a>
                 </li>
                 <li class="nav-main-item">
-                    <a class="nav-main-link <?= ($urlMenu == "sop" || $urlMenu == "sop/new" || $urlMenu == "sop/edit") ? 'active' : '' ?>" href="<?= base_url('backend/sop/list') ?>">
+                    <a class="nav-main-link <?= ($urlMenu == "sop/list" || $urlMenu == "sop/detail") ? 'active' : '' ?>" href="<?= base_url('backend/sop/list') ?>">
                         <i class="nav-main-link-icon fa fa-cubes"></i>
                         <span class="nav-main-link-name">SOP</span>
                     </a>
@@ -143,6 +143,7 @@
                         $urlMenu == "sop" ||
                         $urlMenu == "sop/new" ||
                         $urlMenu == "sop/edit" ||
+                        $urlMenu == "sop/show" ||
                         // Categories
                         $urlMenu == "categories" ||
                         $urlMenu == "categories/new" ||
@@ -257,7 +258,7 @@
                                 </a>
                             </li>
                             <li class="nav-main-item">
-                                <a class="nav-main-link <?= ($urlMenu == "sop" || $urlMenu == "sop/new" || $urlMenu == "sop/edit") ? 'active' : '' ?>" href="<?= base_url('backend/sop') ?>">
+                                <a class="nav-main-link <?= ($urlMenu == "sop" || $urlMenu == "sop/new" || $urlMenu == "sop/edit"|| $urlMenu == "sop/show") ? 'active' : '' ?>" href="<?= base_url('backend/sop') ?>">
                                     <i class="nav-main-link-icon fa fa-cubes"></i>
                                     <span class="nav-main-link-name">SOP</span>
                                 </a>

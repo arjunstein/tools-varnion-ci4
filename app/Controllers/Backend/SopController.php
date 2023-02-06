@@ -38,6 +38,32 @@ class SopController extends ResourceController
         return view('backend/sop/list', $data);
     }
 
+    public function show($id = null)
+    {
+        // Setting Url Segments
+        $urlSegments = $this->request->uri->getSegments();
+        $urlMenu = array_slice($urlSegments, 1);
+        unset($urlMenu[count($urlMenu) - 2]);
+        $urlMenu = implode('/', $urlMenu);
+
+        $data = [
+            'sop' => $this->SopModel->find($id),
+            'title' => "Detail Data SOP - Tools Varnion",
+            'urlMenu' => $urlMenu,
+        ];
+
+        if (!$id) {
+            return redirect()->to(base_url('backend/sop'))->with('error', "Data SOP does not exist!");
+        }
+
+        // Load model and get the category data
+        if (!$data['sop']) {
+            return redirect()->to(base_url('backend/sop'))->with('error', "Data SOP does not exist!");
+        }
+
+        return view('backend/sop/detail', $data);
+    }
+
     /**
      * Return a new resource object, with default properties
      *
@@ -67,7 +93,12 @@ class SopController extends ResourceController
         if ($validated) {
             $fileName = $file->getRandomName();
             $writePath = './assets/images/sop';
-            $file->move($writePath, $fileName);
+
+            $image = \Config\Services::image();
+            $image->withFile($file->getTempName())
+            ->resize(700, 700, 'height')
+            ->save($writePath . '/' . $fileName);
+            // $file->move($writePath, $fileName);
             $data = [
                 "uploaded" => true,
                 "url" => base_url('assets/images/sop/' . $fileName),
