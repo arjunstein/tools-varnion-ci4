@@ -160,7 +160,12 @@
                         // Internal Tools
                         $urlMenu == "internal_tools" ||
                         $urlMenu == "internal_tools/new" ||
-                        $urlMenu == "internal_tools/edit"
+                        $urlMenu == "internal_tools/edit" || 
+
+                        // Teams
+                        $urlMenu == "teams" ||
+                        $urlMenu == "teams/new" ||
+                        $urlMenu == "teams/edit"
                     ) ? 'open' : '' ?>
                 ">
                         <a class="nav-main-link nav-main-link-submenu" data-toggle="submenu" aria-haspopup="true" aria-expanded="false" href="#">
@@ -230,6 +235,12 @@
                                 <a class="nav-main-link <?= ($urlMenu == "internal_tools" || $urlMenu == "internal_tools/new" || $urlMenu == "internal_tools/edit") ? 'active' : '' ?>" href="<?= base_url('backend/internal_tools') ?>">
                                     <i class="nav-main-link-icon fas fa-cog"></i>
                                     <span class="nav-main-link-name">Internal Tools</span>
+                                </a>
+                            </li>
+                            <li class="nav-main-item">
+                                <a class="nav-main-link <?= ($urlMenu == "teams" || $urlMenu == "teams/new" || $urlMenu == "teams/edit") ? 'active' : '' ?>" href="<?= base_url('backend/teams') ?>">
+                                    <i class="nav-main-link-icon fa fa-user-circle"></i>
+                                    <span class="nav-main-link-name">Teams</span>
                                 </a>
                             </li>
                         </ul>

@@ -78,6 +78,10 @@ class pageFormsValidation {
           minlength: 2
         },
         // Create Categories
+        'val-nameTeam': {
+          required: true
+        },
+        // Create Categories
         'val-nameCategory': {
           required: true
         },
@@ -131,6 +135,10 @@ class pageFormsValidation {
         'val-number': 'Please enter a number!',
         'val-range': 'Please enter a number between 1 and 5!',
         'val-terms': 'You must agree to the service terms!',
+        // Create Teams
+        'val-nameTeam': {
+          required: 'Name Team cannot be empty!',
+        },
         // Create Categories
         'val-nameCategory': {
           required: 'Name Category cannot be empty!',

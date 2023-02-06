@@ -14,7 +14,7 @@
                 <nav class="flex-shrink-0 mt-3 mt-sm-0 ms-sm-3" aria-label="breadcrumb">
                     <ol class="breadcrumb breadcrumb-alt">
                         <li class="breadcrumb-item">
-                            <a class="link-fx" href="<?= base_url('backend/categories') ?>">Data Categories Privilege</a>
+                            <a class="link-fx" href="<?= base_url('backend/categories_privilege') ?>">Data Categories Privilege</a>
                         </li>
                         <li class="breadcrumb-item" aria-current="page">
                             Edit Data Category Privilege
