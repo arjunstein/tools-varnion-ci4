@@ -170,6 +170,11 @@
                         $urlMenu == "internal_tools/new" ||
                         $urlMenu == "internal_tools/edit" ||
 
+                        // External Tools
+                        $urlMenu == "external_tools" ||
+                        $urlMenu == "external_tools/new" ||
+                        $urlMenu == "external_tools/edit" ||
+
                         // Teams
                         $urlMenu == "teams" ||
                         $urlMenu == "teams/new" ||
@@ -246,6 +251,12 @@
                                 </ul>
                             </li>
                             <li class="nav-main-item">
+                                <a class="nav-main-link <?= ($urlMenu == "external_tools" || $urlMenu == "external_tools/new" || $urlMenu == "external_tools/edit") ? 'active' : '' ?>" href="<?= base_url('backend/external_tools') ?>">
+                                    <i class="nav-main-link-icon fas fa-wrench"></i>
+                                    <span class="nav-main-link-name">External Tools</span>
+                                </a>
+                            </li>
+                            <li class="nav-main-item">
                                 <a class="nav-main-link <?= ($urlMenu == "internal_tools" || $urlMenu == "internal_tools/new" || $urlMenu == "internal_tools/edit") ? 'active' : '' ?>" href="<?= base_url('backend/internal_tools') ?>">
                                     <i class="nav-main-link-icon fas fa-cog"></i>
                                     <span class="nav-main-link-name">Internal Tools</span>
@@ -258,7 +269,7 @@
                                 </a>
                             </li>
                             <li class="nav-main-item">
-                                <a class="nav-main-link <?= ($urlMenu == "sop" || $urlMenu == "sop/new" || $urlMenu == "sop/edit"|| $urlMenu == "sop/show") ? 'active' : '' ?>" href="<?= base_url('backend/sop') ?>">
+                                <a class="nav-main-link <?= ($urlMenu == "sop" || $urlMenu == "sop/new" || $urlMenu == "sop/edit" || $urlMenu == "sop/show") ? 'active' : '' ?>" href="<?= base_url('backend/sop') ?>">
                                     <i class="nav-main-link-icon fa fa-cubes"></i>
                                     <span class="nav-main-link-name">SOP</span>
                                 </a>

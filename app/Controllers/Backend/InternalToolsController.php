@@ -58,16 +58,16 @@ class InternalToolsController extends ResourceController
         $rules = [
             'val-nameInternalTool' => [
                 'rules' => 'required',
-                'label' => 'Name Internal Tools Gamas',
+                'label' => 'Name Internal Tools',
                 'errors' => [
-                    'required' => 'Name Internal Tools Gamas cannot be empty!',
+                    'required' => 'Name Internal Tools cannot be empty!',
                 ],
             ],
             'val-urlInternalTool' => [
                 'rules' => 'required',
-                'label' => 'URL Internal Tools Gamas',
+                'label' => 'URL Internal Tools',
                 'errors' => [
-                    'required' => 'URL Internal Tools Gamas cannot be empty!',
+                    'required' => 'URL Internal Tools cannot be empty!',
                 ],
             ],
             'val-description' => [
@@ -79,9 +79,9 @@ class InternalToolsController extends ResourceController
             ],
             'val-categories' => [
                 'rules' => 'required',
-                'label' => 'Categories Gamas',
+                'label' => 'Categories',
                 'errors' => [
-                    'required' => 'Categories Gamas cannot be empty!',
+                    'required' => 'Categories cannot be empty!',
                 ],
             ],
         ];
@@ -174,16 +174,16 @@ class InternalToolsController extends ResourceController
             $rules = [
                 'nameInternalTool' => [
                     'rules' => 'required',
-                    'label' => 'Name Internal Tools Gamas',
+                    'label' => 'Name Internal Tools',
                     'errors' => [
-                        'required' => 'Name Internal Tools Gamas cannot be empty!',
+                        'required' => 'Name Internal Tools cannot be empty!',
                     ],
                 ],
                 'urlInternalTool' => [
                     'rules' => 'required',
-                    'label' => 'URL Internal Tools Gamas',
+                    'label' => 'URL Internal Tools',
                     'errors' => [
-                        'required' => 'URL Internal Tools Gamas cannot be empty!',
+                        'required' => 'URL Internal Tools cannot be empty!',
                     ],
                 ],
                 'description' => [
@@ -195,9 +195,9 @@ class InternalToolsController extends ResourceController
                 ],
                 'categories' => [
                     'rules' => 'required',
-                    'label' => 'Categories Gamas',
+                    'label' => 'Categories',
                     'errors' => [
-                        'required' => 'Categories Gamas cannot be empty!',
+                        'required' => 'Categories cannot be empty!',
                     ],
                 ],
             ];

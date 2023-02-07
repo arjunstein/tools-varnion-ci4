@@ -47,6 +47,7 @@ $routes->group('backend', ['filter' => 'AuthFilter'], static function ($routes) 
     $routes->resource('categories_notes', ['controller' => 'backend\CategoryNotesController', 'except' => 'show']);
     $routes->resource('categories_privilege', ['controller' => 'backend\CategoryPrivilegeController', 'except' => 'show']);
     $routes->resource('internal_tools', ['controller' => 'backend\InternalToolsController', 'except' => 'show']);
+    $routes->resource('external_tools', ['controller' => 'backend\ExternalToolsController', 'except' => 'show']);
     $routes->resource('incoming_case', ['controller' => 'backend\IncomingCaseController', 'except' => 'show']);
     $routes->resource('sop', ['controller' =>'backend\SopController', 'except' => 'show']);
     $routes->post('sop/uploadImage/', 'backend\SopController::uploadImage');
