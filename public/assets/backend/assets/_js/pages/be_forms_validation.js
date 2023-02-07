@@ -108,6 +108,7 @@ class pageFormsValidation {
         'val-nameCategoryPrivilege': {
           required: true
         },
+        // Internal Tools
         'val-nameInternalTool': {
           required: true
         },
@@ -118,6 +119,19 @@ class pageFormsValidation {
           required: true
         },
         'val-categories': {
+          required: true
+        },
+        // External Tools
+        'val-nameExternalTool': {
+          required: true
+        },
+        'val-urlExternalTool': {
+          required: true
+        },
+        'val-descriptionExternalTool': {
+          required: true
+        },
+        'val-categoriesExternalTool': {
           required: true
         },
       },
@@ -177,6 +191,7 @@ class pageFormsValidation {
         'val-nameCategoryPrivilege': {
           required: 'Name Category Gamas cannot be empty!',
         },
+        // Internal Tools
         'val-nameInternalTool': {
           required: 'Name Internal Tool cannot be empty!',
         },
@@ -187,6 +202,19 @@ class pageFormsValidation {
           required: 'Description cannot be empty!',
         },
         'val-categories': {
+          required: 'Categories must be selected!',
+        },
+        // External Tools
+        'val-nameExternalTool': {
+          required: 'Name Internal Tool cannot be empty!',
+        },
+        'val-urlExternalTool': {
+          required: 'URL Internal Tool cannot be empty!',
+        },
+        'val-descriptionExternalTool': {
+          required: 'Description cannot be empty!',
+        },
+        'val-categoriesExternalTool': {
           required: 'Categories must be selected!',
         },
       },

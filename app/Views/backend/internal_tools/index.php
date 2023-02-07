@@ -60,10 +60,10 @@
                     <thead>
                         <tr>
                             <th class="text-center" width="5%">No.</th>
-                            <th>Name Internal Tools</th>
-                            <th>URL Internal Tools</th>
-                            <th>Description Internal Tools</th>
-                            <th>Categories Internal Tools</th>
+                            <th>Name</th>
+                            <th>URL</th>
+                            <th>Description</th>
+                            <th>Categories</th>
                             <th class="text-center" width="13%">Action</th>
                         </tr>
                     </thead>
@@ -75,7 +75,7 @@
                             <tr>
                                 <td class="text-center fs-sm"><?= $no++ ?></td>
                                 <td class="fw-semibold fs-sm"><?= $internal_tool['name_internal_tools'] ?></td>
-                                <td class="fs-sm"><?= substr($internal_tool['url_internal_tools'], 0, 30); ?>...</td>
+                                <td class="fs-sm"><a href="<?= $internal_tool['url_internal_tools'] ?>" target="_blank"><?= substr($internal_tool['url_internal_tools'], 0, 30); ?>...</a></td>
                                 <td class="fs-sm"><?= substr($internal_tool['description_internal_tools'], 0, 50); ?>...</td>
                                 <td class="fs-sm"><?= $internal_tool['category_internal_tools'] ?></td>
                                 <td class="text-center">

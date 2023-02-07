@@ -57,13 +57,12 @@
                             <span class="fs-sm fw-medium">Inbox</span>
                             <span class="badge rounded-pill bg-primary ms-2">3</span>
                         </a>
-                        <a class="dropdown-item d-flex align-items-center justify-content-between" href="be_pages_generic_profile.html">
+                        <a class="dropdown-item d-flex align-items-center justify-content-between" href="<?= base_url('backend/users/' . session()->id . '/edit') ?>">
                             <span class="fs-sm fw-medium">Profile</span>
-                            <span class="badge rounded-pill bg-primary ms-2">1</span>
                         </a>
-                        <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
+                        <!-- <a class="dropdown-item d-flex align-items-center justify-content-between" href="javascript:void(0)">
                             <span class="fs-sm fw-medium">Settings</span>
-                        </a>
+                        </a> -->
                     </div>
                     <div role="separator" class="dropdown-divider m-0"></div>
                     <div class="p-2">

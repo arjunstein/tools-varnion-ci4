@@ -164,6 +164,11 @@ Name    : Moch Azmi Iskandar
                 // console.log(selectedOption);
                 table.columns(4).search(selectedOption, true, false).draw();
             });
+            $('#filter-categories_external').on('change', function() {
+                var selectedOption = this.value;
+                // console.log(selectedOption);
+                table.columns(4).search(selectedOption, true, false).draw();
+            });
         });
     </script>
 </body>
