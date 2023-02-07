@@ -106,6 +106,12 @@
                     </a>
                 </li>
                 <li class="nav-main-item">
+                    <a class="nav-main-link <?= ($urlMenu == "customer/list" || $urlMenu == "customer/detail") ? 'active' : '' ?>" href="<?= base_url('backend/customer/list') ?>">
+                        <i class="nav-main-link-icon fa fa-building"></i>
+                        <span class="nav-main-link-name">Customer</span>
+                    </a>
+                </li>
+                <li class="nav-main-item">
                     <a class="nav-main-link <?= ($urlMenu == "sop/list" || $urlMenu == "sop/detail") ? 'active' : '' ?>" href="<?= base_url('backend/sop/list') ?>">
                         <i class="nav-main-link-icon fa fa-cubes"></i>
                         <span class="nav-main-link-name">SOP</span>
@@ -164,6 +170,10 @@
                         $urlMenu == "categories_privilege" ||
                         $urlMenu == "categories_privilege/new" ||
                         $urlMenu == "categories_privilege/edit" ||
+                        // Categories Onsite
+                        $urlMenu == "categories_onsite" ||
+                        $urlMenu == "categories_onsite/new" ||
+                        $urlMenu == "categories_onsite/edit" ||
 
                         // Internal Tools
                         $urlMenu == "internal_tools" ||
@@ -179,6 +189,11 @@
                         $urlMenu == "teams" ||
                         $urlMenu == "teams/new" ||
                         $urlMenu == "teams/edit" ||
+
+                        // Customer
+                        $urlMenu == "customer" ||
+                        $urlMenu == "customer/new" ||
+                        $urlMenu == "customer/edit" ||
 
                         // Incoming Case
                         $urlMenu == "incoming_case" ||
@@ -210,6 +225,10 @@
                             $urlMenu == "categories_notes" ||
                             $urlMenu == "categories_notes/new" ||
                             $urlMenu == "categories_notes/edit" ||
+                            // Categories Onsite
+                            $urlMenu == "categories_onsite" ||
+                            $urlMenu == "categories_onsite/new" ||
+                            $urlMenu == "categories_onsite/edit" ||
                             // Categories Privilege
                             $urlMenu == "categories_privilege" ||
                             $urlMenu == "categories_privilege/new" ||
@@ -245,6 +264,11 @@
                                     <li class="nav-main-item">
                                         <a class="nav-main-link <?= ($urlMenu == "categories_privilege" || $urlMenu == "categories_privilege/new" || $urlMenu == "categories_privilege/edit") ? 'active' : '' ?>" href="<?= base_url('backend/categories_privilege') ?>">
                                             <span class="nav-main-link-name">Categories Privilege</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-main-item">
+                                        <a class="nav-main-link <?= ($urlMenu == "categories_onsite" || $urlMenu == "categories_onsite/new" || $urlMenu == "categories_onsite/edit") ? 'active' : '' ?>" href="<?= base_url('backend/categories_onsite') ?>">
+                                            <span class="nav-main-link-name">Categories Onsite</span>
                                         </a>
                                     </li>
 
@@ -285,6 +309,12 @@
                                 <a class="nav-main-link <?= ($urlMenu == "teams" || $urlMenu == "teams/new" || $urlMenu == "teams/edit") ? 'active' : '' ?>" href="<?= base_url('backend/teams') ?>">
                                     <i class="nav-main-link-icon fa fa-user-circle"></i>
                                     <span class="nav-main-link-name">Teams</span>
+                                </a>
+                            </li>
+                            <li class="nav-main-item">
+                                <a class="nav-main-link <?= ($urlMenu == "customer" || $urlMenu == "customer/new" || $urlMenu == "customer/edit") ? 'active' : '' ?>" href="<?= base_url('backend/customer') ?>">
+                                    <i class="nav-main-link-icon fas fa-building"></i>
+                                    <span class="nav-main-link-name">Customers</span>
                                 </a>
                             </li>
 

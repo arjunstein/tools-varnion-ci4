@@ -172,5 +172,51 @@
     </div>
     <!-- END Get Started -->
 </main>
+
+<script>
+    $(document).ready(function() {
+        let customerList = $("#customerList");
+        let customerData = <?= json_encode($customer) ?>;
+        let no = 1;
+
+        // Initial load of customer data
+        customerData.forEach(function(customer) {
+            customerList.append(`
+            <tr>
+                <td class="table-success text-center">
+                    ${no++}.
+                </td>
+                <td>
+                    <a class="fw-medium" href="<?= base_url('backend/customer/') ?>${customer.id_customer}/detail">${customer.company_customer}</a>
+                </td>
+            </tr>
+        `);
+        });
+
+        // Event listener for live search
+        $("#searchInput").on("keyup", function() {
+            let keyword = $(this).val().toLowerCase();
+            customerList.empty();
+            no = 1;
+
+            customerData.forEach(function(customer) {
+                let customerName = customer.company_customer.toLowerCase();
+
+                if (customerName.indexOf(keyword) > -1) {
+                    customerList.append(`
+                    <tr>
+                        <td class="table-success text-center">
+                            ${no++}.
+                        </td>
+                        <td>
+                            <a class="fw-medium" href="<?= base_url('backend/customer/') ?>${customer.id_customer}/detail">${customer.company_customer}</a>
+                        </td>
+                    </tr>
+                `);
+                }
+            });
+        });
+    });
+</script>
 <!-- END Main Container -->
 <?= $this->endSection() ?>

@@ -38,21 +38,33 @@ $routes->post('auth/login/proccess', 'auth\login::proccess');
 $routes->get('auth/login/logout/(:num)', 'auth\login::logout/$1');
 // *** BACKEND ***
 $routes->group('backend', ['filter' => 'AuthFilter'], static function ($routes) {
+    // Dashboard
     $routes->get('dashboard', 'backend\DashboardController::index');
+    // Users
     $routes->resource('users', ['controller' => 'backend\UserController', 'except' => 'show']);
+    // Customer
+    $routes->resource('customer', ['controller' => 'backend\CustomerController', 'except' => 'show']);
+    $routes->get('customer/list/', 'backend\CustomerController::list');
+    // Notes
     $routes->resource('notes', ['controller' => 'backend\NoteController']);
+    // All Categories
     $routes->resource('categories', ['controller' => 'backend\CategoryController', 'except' => 'show']);
     $routes->resource('categories_external', ['controller' => 'backend\CategoryExternalController', 'except' => 'show']);
     $routes->resource('categories_gamas', ['controller' => 'backend\CategoryGamasController', 'except' => 'show']);
     $routes->resource('categories_notes', ['controller' => 'backend\CategoryNotesController', 'except' => 'show']);
     $routes->resource('categories_privilege', ['controller' => 'backend\CategoryPrivilegeController', 'except' => 'show']);
+    $routes->resource('categories_onsite', ['controller' => 'backend\CategoryOnsiteController', 'except' => 'show']);
+    // All Tools
     $routes->resource('internal_tools', ['controller' => 'backend\InternalToolsController', 'except' => 'show']);
     $routes->resource('external_tools', ['controller' => 'backend\ExternalToolsController', 'except' => 'show']);
+    // Incoming Case
     $routes->resource('incoming_case', ['controller' => 'backend\IncomingCaseController', 'except' => 'show']);
+    // SOP
     $routes->resource('sop', ['controller' =>'backend\SopController', 'except' => 'show']);
     $routes->post('sop/uploadImage/', 'backend\SopController::uploadImage');
     $routes->get('sop/(:any)/detail', 'backend\SopController::show/$1');
     $routes->get('sop/list/', 'backend\SopController::list');
+    // Teams
     $routes->resource('teams', ['controller' => 'backend\TeamController', 'except' => 'show']);
 });
 
