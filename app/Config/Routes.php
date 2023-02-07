@@ -40,6 +40,7 @@ $routes->get('auth/login/logout/(:num)', 'auth\login::logout/$1');
 $routes->group('backend', ['filter' => 'AuthFilter'], static function ($routes) {
     $routes->get('dashboard', 'backend\DashboardController::index');
     $routes->resource('users', ['controller' => 'backend\UserController', 'except' => 'show']);
+    $routes->resource('customer', ['controller' => 'backend\CustomerController', 'except' => 'show']);
     $routes->resource('notes', ['controller' => 'backend\NoteController']);
     $routes->resource('categories', ['controller' => 'backend\CategoryController', 'except' => 'show']);
     $routes->resource('categories_external', ['controller' => 'backend\CategoryExternalController', 'except' => 'show']);

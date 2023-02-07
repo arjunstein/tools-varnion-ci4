@@ -184,6 +184,11 @@
                         $urlMenu == "teams/new" ||
                         $urlMenu == "teams/edit" ||
 
+                        // Customer
+                        $urlMenu == "customer" ||
+                        $urlMenu == "customer/new" ||
+                        $urlMenu == "customer/edit" ||
+
                         // Incoming Case
                         $urlMenu == "incoming_case" ||
                         $urlMenu == "incoming_case/new" ||
@@ -298,6 +303,12 @@
                                 <a class="nav-main-link <?= ($urlMenu == "teams" || $urlMenu == "teams/new" || $urlMenu == "teams/edit") ? 'active' : '' ?>" href="<?= base_url('backend/teams') ?>">
                                     <i class="nav-main-link-icon fa fa-user-circle"></i>
                                     <span class="nav-main-link-name">Teams</span>
+                                </a>
+                            </li>
+                            <li class="nav-main-item">
+                                <a class="nav-main-link <?= ($urlMenu == "customer" || $urlMenu == "customer/new" || $urlMenu == "customer/edit") ? 'active' : '' ?>" href="<?= base_url('backend/customer') ?>">
+                                    <i class="nav-main-link-icon fas fa-building"></i>
+                                    <span class="nav-main-link-name">Customers</span>
                                 </a>
                             </li>
 
