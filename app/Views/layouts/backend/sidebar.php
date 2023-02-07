@@ -106,6 +106,12 @@
                     </a>
                 </li>
                 <li class="nav-main-item">
+                    <a class="nav-main-link <?= ($urlMenu == "customer/list" || $urlMenu == "customer/detail") ? 'active' : '' ?>" href="<?= base_url('backend/customer/list') ?>">
+                        <i class="nav-main-link-icon fa fa-building"></i>
+                        <span class="nav-main-link-name">Customer</span>
+                    </a>
+                </li>
+                <li class="nav-main-item">
                     <a class="nav-main-link <?= ($urlMenu == "sop/list" || $urlMenu == "sop/detail") ? 'active' : '' ?>" href="<?= base_url('backend/sop/list') ?>">
                         <i class="nav-main-link-icon fa fa-cubes"></i>
                         <span class="nav-main-link-name">SOP</span>

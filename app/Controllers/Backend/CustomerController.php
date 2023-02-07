@@ -22,8 +22,21 @@ class CustomerController extends ResourceController
             'title' => "Data Customer - Tools Varnion",
             'urlMenu' => implode('/', array_slice($this->request->uri->getSegments(), 1)),
         ];
-
+        
         return view('backend/customer/index', $data);
+    }
+
+    public function list()
+    {
+
+        $data = [
+            'customer' => $this->CustomerModel->orderBy('id_customer', 'DESC')->paginate(15),
+            'total_customer' => $this->CustomerModel->countAllResults(),
+            'pager' => $this->CustomerModel->pager,
+            'title' => "List CUSTOMER - Tools Varnion",
+            'urlMenu' => implode('/', array_slice($this->request->uri->getSegments(), 1)),
+        ];
+        return view('backend/customer/list', $data);
     }
 
     /**
