@@ -164,6 +164,10 @@
                         $urlMenu == "categories_privilege" ||
                         $urlMenu == "categories_privilege/new" ||
                         $urlMenu == "categories_privilege/edit" ||
+                        // Categories Onsite
+                        $urlMenu == "categories_onsite" ||
+                        $urlMenu == "categories_onsite/new" ||
+                        $urlMenu == "categories_onsite/edit" ||
 
                         // Internal Tools
                         $urlMenu == "internal_tools" ||
@@ -210,6 +214,10 @@
                             $urlMenu == "categories_notes" ||
                             $urlMenu == "categories_notes/new" ||
                             $urlMenu == "categories_notes/edit" ||
+                            // Categories Onsite
+                            $urlMenu == "categories_onsite" ||
+                            $urlMenu == "categories_onsite/new" ||
+                            $urlMenu == "categories_onsite/edit" ||
                             // Categories Privilege
                             $urlMenu == "categories_privilege" ||
                             $urlMenu == "categories_privilege/new" ||
@@ -245,6 +253,11 @@
                                     <li class="nav-main-item">
                                         <a class="nav-main-link <?= ($urlMenu == "categories_privilege" || $urlMenu == "categories_privilege/new" || $urlMenu == "categories_privilege/edit") ? 'active' : '' ?>" href="<?= base_url('backend/categories_privilege') ?>">
                                             <span class="nav-main-link-name">Categories Privilege</span>
+                                        </a>
+                                    </li>
+                                    <li class="nav-main-item">
+                                        <a class="nav-main-link <?= ($urlMenu == "categories_onsite" || $urlMenu == "categories_onsite/new" || $urlMenu == "categories_onsite/edit") ? 'active' : '' ?>" href="<?= base_url('backend/categories_onsite') ?>">
+                                            <span class="nav-main-link-name">Categories Onsite</span>
                                         </a>
                                     </li>
 

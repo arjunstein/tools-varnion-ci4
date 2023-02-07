@@ -108,6 +108,9 @@ class pageFormsValidation {
         'val-nameCategoryPrivilege': {
           required: true
         },
+        'val-nameCategoryOnsite': {
+          required: true
+        },
         // Internal Tools
         'val-nameInternalTool': {
           required: true
@@ -190,6 +193,9 @@ class pageFormsValidation {
         },
         'val-nameCategoryPrivilege': {
           required: 'Name Category Gamas cannot be empty!',
+        },
+        'val-nameCategoryOnsite': {
+          required: 'Name Category Onsite cannot be empty!',
         },
         // Internal Tools
         'val-nameInternalTool': {
